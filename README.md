@@ -124,7 +124,16 @@
         <pre><code>cd your-project</code></pre>
         <li>Run the following command:</li>
         <pre><code>./gradlew test</code></pre>
-
+<p>To run the citrus tests for the project, you can need to do next steps:</p>
+        <li>Run Docker Desktop on your local machine</li>
+        <li>Navigate to the project directory of api:</li>
+          <pre><code>cd your-project</code></pre>
+        <li>Run docker-compose.yml to start api</li>
+          <pre><code>docker-compose up</code></pre>
+        <li>Navigate to the project directory of citrus tests:</li>
+          <pre><code>cd your-project</code></pre>
+        <li>Run the following command:</li>
+          <pre><code>./gradlew test</code></pre>
 
 <h3 id="service-methods">Service Methods</h3>
 
