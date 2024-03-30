@@ -1,0 +1,57 @@
+syntax = "proto3";
+package com.bookstore.grpc;
+import "google/protobuf/empty.proto";
+
+message BookResponse {
+  string id = 1;
+  string title = 2;
+  string author = 3;
+  string isbn = 4;
+  int32 quantity = 5;
+  string description = 6;
+  float price = 7;
+}
+
+message ListOfBookResponses {
+  repeated BookResponse books = 1;
+  int32 size = 2;
+}
+
+message GetBookRequest {
+  string id = 1;
+}
+
+message CreateBookRequest {
+  string title = 1;
+  string author = 2;
+  string isbn = 3;
+  int32 quantity = 4;
+  string description = 5;
+  float price = 6;
+}
+
+message UpdateBookRequest {
+  string id = 1;
+  optional string title = 2;
+  optional string author = 3;
+  optional string isbn = 4;
+  optional int32 quantity = 5;
+  optional string description = 6;
+  optional float price = 7;
+}
+
+message DeleteBookRequest {
+  string id = 1;
+}
+
+message DeleteBookResponse {
+  bool isDeleted = 1;
+}
+
+service BookstoreService {
+  rpc GetBook(GetBookRequest) returns (BookResponse);
+  rpc GetAllBooks(google.protobuf.Empty) returns (ListOfBookResponses);
+  rpc CreateBook(CreateBookRequest) returns (BookResponse);
+  rpc UpdateBook(UpdateBookRequest) returns (BookResponse);
+  rpc DeleteBook(DeleteBookRequest) returns (DeleteBookResponse);
+}

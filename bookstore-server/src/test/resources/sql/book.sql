@@ -1,0 +1,4 @@
+INSERT INTO books(id, title, author, isbn, quantity, description, price) VALUES
+('b7f0ef30-e861-4c3f-9858-2bc59e3aee75', 'The Great Gatsby', 'F. Scott Fitzgerald', '9780743273565', 10, 'The Great Gatsby, F. Scott Fitzgerald''s third book, stands as the supreme achievement of his career.', 9.99),
+('72f02364-2590-42e0-9488-39b6f9f1c331', 'To Kill a Mockingbird', 'Harper Lee', '9780061120084', 10, 'The unforgettable novel of a childhood in a sleepy Southern town and the crisis of conscience that rocked it.', 9.99),
+('897f1e44-6f67-427b-a4a7-932ac67709f9', '1984', 'George Orwell', '9780451524935', 10, 'Written in 1948, 1984 was George Orwell’s chilling prophecy about the future.', 9.99);
